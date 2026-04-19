@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡El Gran Viaje de Pepa por la Historia!</title>
+    <title>🌟 ¡El Super-Reto de Historia de Pepa! 🌟</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@500;700&display=swap');
 
         body {
             font-family: 'Quicksand', sans-serif;
-            background-color: #fffae6; /* Amarillo crema suave */
-            background-image: radial-gradient(#ffe680 1px, transparent 1px);
-            background-size: 30px 30px;
-            color: #4a4a4a;
+            background-color: #e0f7fa;
+            background-image: radial-gradient(#b2ebf2 2px, transparent 2px);
+            background-size: 40px 40px;
+            color: #2c3e50;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -23,227 +23,239 @@
 
         h1 {
             font-family: 'Fredoka One', cursive;
-            color: #ff6f91;
-            text-shadow: 3px 3px 0px #fff;
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            color: #ff5252;
+            text-shadow: 4px 4px 0px #fff;
+            font-size: 2.8em;
+            margin-bottom: 15px;
             text-align: center;
         }
 
         #game-card {
             background: white;
-            border: 6px solid #b3e5fc;
-            border-radius: 40px;
-            padding: 30px;
-            box-shadow: 0 15px 0px #b3e5fc;
-            max-width: 700px;
-            width: 100%;
-            position: relative;
-            overflow: hidden;
+            border: 8px solid #ffcc5c;
+            border-radius: 50px;
+            padding: 35px;
+            box-shadow: 0 15px 0px #fbc02d;
+            max-width: 750px;
+            width: 95%;
+            transition: all 0.3s ease;
         }
 
         .header-info {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 20px;
-            font-weight: bold;
-            color: #88d8b0;
-            font-size: 1.2em;
+            margin-bottom: 25px;
+            font-weight: 800;
+            color: #4db6ac;
+            font-size: 1.3em;
         }
 
         .question-box {
-            background: #f0faff;
-            border-radius: 25px;
-            padding: 20px;
-            margin-bottom: 25px;
-            font-size: 1.4em;
-            line-height: 1.4;
-            color: #2c3e50;
-            border-left: 8px solid #ffcc5c;
+            background: #fff9c4;
+            border-radius: 30px;
+            padding: 25px;
+            margin-bottom: 30px;
+            font-size: 1.5em;
+            line-height: 1.3;
+            color: #37474f;
+            border: 3px dashed #ffb300;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
 
         .options-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 15px;
+            gap: 18px;
         }
 
         .btn-opt {
-            background: #fff;
-            border: 3px solid #e0e0e0;
-            padding: 18px;
-            font-size: 1.1em;
-            border-radius: 20px;
+            background: #ffffff;
+            border: 4px solid #81d4fa;
+            padding: 20px;
+            font-size: 1.2em;
+            border-radius: 25px;
             cursor: pointer;
             transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             font-family: 'Quicksand', sans-serif;
             font-weight: 700;
-            color: #555;
-            box-shadow: 0 4px 0 #e0e0e0;
+            color: #0277bd;
+            box-shadow: 0 6px 0 #81d4fa;
         }
 
         .btn-opt:hover:not(:disabled) {
-            transform: translateY(-3px);
-            border-color: #ff6f91;
-            color: #ff6f91;
-            box-shadow: 0 7px 0 #ff6f91;
+            transform: translateY(-4px);
+            background-color: #e1f5fe;
+            border-color: #03a9f4;
+            box-shadow: 0 10px 0 #03a9f4;
         }
 
         .btn-opt:active:not(:disabled) {
             transform: translateY(2px);
-            box-shadow: 0 2px 0 #ff6f91;
+            box-shadow: 0 2px 0 #03a9f4;
         }
 
         .correct {
-            background-color: #88d8b0 !important;
+            background-color: #a5d6a7 !important;
             border-color: #4caf50 !important;
-            color: white !important;
-            box-shadow: 0 4px 0 #4caf50 !important;
+            color: #1b5e20 !important;
+            box-shadow: 0 6px 0 #2e7d32 !important;
         }
 
         .wrong {
-            background-color: #ffcc5c !important;
-            border-color: #ffa700 !important;
-            color: white !important;
-            box-shadow: 0 4px 0 #ffa700 !important;
+            background-color: #ffab91 !important;
+            border-color: #ff5722 !important;
+            color: #bf360c !important;
+            box-shadow: 0 6px 0 #d84315 !important;
         }
 
         #next-area {
-            margin-top: 30px;
+            margin-top: 35px;
             text-align: center;
         }
 
         .btn-main {
-            background: #ff6f91;
+            background: #ff5252;
             color: white;
             border: none;
-            padding: 15px 40px;
-            font-size: 1.3em;
-            border-radius: 50px;
+            padding: 18px 50px;
+            font-size: 1.4em;
+            border-radius: 60px;
             font-family: 'Fredoka One', cursive;
             cursor: pointer;
-            box-shadow: 0 6px 0 #d4506e;
+            box-shadow: 0 8px 0 #c62828;
             display: none;
+            transition: transform 0.2s;
         }
 
         .btn-main:hover {
-            background: #ff85a1;
+            background: #ff1744;
+            transform: scale(1.05);
         }
 
         #final-score {
             font-size: 2em;
-            color: #ff6f91;
+            color: #ff5252;
             display: none;
             flex-direction: column;
             align-items: center;
+            text-align: center;
         }
 
-        .medal { font-size: 3em; margin-bottom: 10px; }
+        .medal { font-size: 4em; margin-bottom: 15px; animation: bounce 1s infinite alternate; }
+        @keyframes bounce { from { transform: translateY(0); } to { transform: translateY(-10px); } }
     </style>
 </head>
 <body>
 
-    <h1>🏰 ¡El Desafío de Pepa! 🚀</h1>
+    <h1>✨ ¡Historia con Pepa! ✨</h1>
     
     <div id="game-card">
         <div class="header-info">
-            <span id="progress-text">Pregunta 1 de 10</span>
-            <span>Aciertos: <span id="score-val">0</span> ⭐</span>
+            <span id="progress-text">Cargando...</span>
+            <span>Puntos: <span id="score-val">0</span> 💎</span>
         </div>
 
         <div id="quiz-content">
-            <div id="q-text" class="question-box">Cargando aventura...</div>
+            <div id="q-text" class="question-box"></div>
             <div id="opts" class="options-grid"></div>
         </div>
 
         <div id="final-score">
-            <div class="medal">🏆</div>
+            <div class="medal">🎁</div>
             <div id="final-text"></div>
-            <button class="btn-main" id="reset-btn" style="display:inline-block; margin-top:20px" onclick="startGame()">¡Otra vez! 🔁</button>
+            <button class="btn-main" id="reset-btn" style="display:inline-block; margin-top:30px" onclick="startGame()">¡Jugar otra vez! 🚀</button>
         </div>
 
         <div id="next-area">
-            <button class="btn-main" id="next-btn" onclick="goToNext()">¡Siguiente! ➡️</button>
+            <button class="btn-main" id="next-btn" onclick="goToNext()">¡Siguiente pregunta! 🎈</button>
         </div>
     </div>
 
     <script>
-        // Banco de 46 preguntas extraídas estrictamente de la fuente
-        const bank = [
-            { q: "¿Qué factor fundamental permitió el incremento de las expediciones durante los siglos XV y XVI?", a: "Los avances de navegación", o: ["La invención del ferrocarril", "El uso de aviones", "Nuevas rutas terrestres"] },
-            { q: "¿Cuál era la principal teoría geográfica que buscaba confirmar la expedición de Cristóbal Colón?", a: "Demostrar que la Tierra era redonda", o: ["Que la Tierra era plana", "Que el sol giraba alrededor", "La existencia de la Antártida"] },
-            { q: "¿Cuál fue la fecha exacta y el puerto de origen de la primera expedición colombina?", a: "3 de agosto de 1492 desde el Puerto de Palos de la Frontera", o: ["12 de octubre de 1492 desde Sevilla", "1 de enero de 1500 desde Madrid", "15 de mayo de 1490 desde Cádiz"] },
-            { q: "Previo a la llegada de los europeos, ¿qué tres grandes civilizaciones poblaban el continente americano?", a: "Aztecas, incas y mayas", o: ["Romanos, griegos y egipcios", "Vikingos y celtas", "Chinos y japoneses"] },
-            { q: "¿Qué ciudades funcionaban como los centros neurálgicos o capitales de los imperios azteca e inca?", a: "Tenochtitlán y Cuzco", o: ["Madrid y Roma", "Lima y Ciudad de México", "París y Londres"] },
-            { q: "Menciona tres plantas que fueron introducidas en Europa desde América.", a: "Tomate, patatas o maíz", o: ["Trigo, cebada y arroz", "Seda, té y especias", "Manzanas y uvas"] },
-            { q: "¿Qué nombres aparecen en tus apuntes sobre la derrota de los imperios americanos?", a: "Felipe, Felipe IV y Carlos IV", o: ["Napoleón y Hitler", "Hércules y Aquiles", "Cid Campeador"] },
-            { q: "¿Qué modelo de división territorial se utilizó para organizar el gobierno de los territorios americanos?", a: "Se organizó en dos virreinatos", o: ["En ayuntamientos", "En una sola ciudad", "En provincias españolas"] },
-            { q: "¿Cuál era el orden jerárquico exacto (1º al 4º) de la sociedad colonial americana?", a: "Española, mestiza, indígena y negra", o: ["Reyes, nobles, vasallos y esclavos", "Pobres y ricos", "Soldados y campesinos"] },
-            { q: "¿Qué modelo político experimentó una gran expansión al término de la Edad Media?", a: "Monarquía autoritaria", o: ["Democracia moderna", "República federal", "Dictadura militar"] },
-            { q: "¿Qué tres estrategias principales utilizaron los monarcas para fortalecer su poder?", a: "Ejércitos permanentes, diplomacia y más impuestos", o: ["Regalos, fiestas y viajes", "Bajar impuestos y disolver el ejército", "Pedir permiso a los nobles"] },
-            { q: "Durante la Edad Moderna, ¿cuál era la división fundamental de los grupos sociales?", a: "Estamentos privilegiados y no privilegiados", o: ["Ricos y pobres", "Norte y Sur", "Equipos A y B"] },
-            { q: "¿De qué dos grandes ventajas disfrutaban la nobleza y el clero?", a: "No pagaban impuestos y tenían sus propias leyes y tribunales", o: ["Podían viajar gratis", "Tenían acceso a internet", "No trabajaban nunca"] },
-            { q: "¿Qué tres grupos profesionales integraban el estamento no privilegiado?", a: "Campesinos, comerciantes y artesanos", o: ["Reyes, nobles y obispos", "Solo los soldados", "Solo los esclavos"] },
-            { q: "¿Qué estrato social logró ascender en importancia gracias al comercio y la banca?", a: "La burguesía", o: ["Los vikingos", "Los monjes", "Los caballeros"] },
-            { q: "¿Cuáles fueron las dos actividades económicas que experimentaron un mayor crecimiento?", a: "El comercio y la banca", o: ["La caza y pesca", "La informática", "La recolección"] },
-            { q: "¿Qué tipo de entidades surgieron con el propósito de financiar a comerciantes y monarcas?", a: "Las bancas públicas", o: ["Las iglesias", "Los castillos", "Las escuelas"] },
-            { q: "¿Bajo qué nombre se conoce a la nueva corriente de pensamiento a finales de la Edad Media?", a: "El Humanismo", o: ["El Feudalismo", "El Surrealismo", "El Existencialismo"] },
-            { q: "¿Quiénes conformaban el matrimonio conocido como los Reyes Católicos?", a: "Isabel de Castilla y Fernando", o: ["Carlos I y Juana", "Felipe II e Isabel", "Alfonso X y Leonor"] },
-            { q: "¿Qué medida militar específica tomaron los Reyes Católicos para consolidar su poder?", a: "Crear un ejército permanente", o: ["Contratar piratas", "Cerrar las fronteras", "Hacer un muro"] },
-            { q: "¿Qué relación de parentesco justificaba el poder de Carlos I?", a: "Era el nieto de los Reyes Católicos", o: ["Era el hijo de Colón", "Era un primo lejano", "Era un rey francés"] },
-            { q: "¿Qué factor generó conflictos tras la llegada de Carlos I a España?", a: "Por sus costumbres", o: ["Porque no tenía oro", "Porque era muy joven", "Por el clima"] },
-            { q: "¿Qué logro territorial caracterizó el reinado de Felipe II?", a: "Amplió los territorios", o: ["Perdió todas las tierras", "Se quedó solo en Madrid", "Descubrió Asia"] },
-            { q: "¿Qué dos monarcas gobernaron después de los Reyes Católicos y antes de Carlos II?", a: "Carlos I y Felipe II", o: ["Felipe V y Fernando VI", "Isabel II", "Alfonso XII"] },
-            { q: "En el siglo XVII, ¿qué decisión militar drástica tomaron Felipe III o Carlos II?", a: "Renunciaron al ejército", o: ["Crearon la aviación", "Conquistaron Inglaterra", "Hicieron una muralla"] },
-            { q: "¿Qué término designaba a las personas de máxima confianza de los monarcas?", a: "Los validos", o: ["Los secretarios", "Los guardaespaldas", "Los cocineros"] },
-            { q: "¿Qué cuatro factores desencadenaron la crisis del siglo XVII?", a: "Guerras, pobreza, menos cosechas y menor actividad comercial", o: ["Falta de barcos", "Invasión alienígena", "Exceso de oro"] },
-            { q: "¿Qué situación se produjo tras la muerte de Carlos II en 1700?", a: "Murió sin descendencia y una parte apoyaba a Felipe V", o: ["España se dividió en dos países", "Se acabó el dinero", "Vino un rey de América"] },
-            { q: "¿Qué evento bélico se desató por la elección de Felipe de Borbón?", a: "La Guerra de Sucesión", o: ["La Guerra de los Cien Años", "La Guerra de la Independencia", "La Guerra Civil"] },
-            { q: "¿En qué año concluyó la Guerra de Sucesión y qué dinastía empezó?", a: "En 1713, la dinastía Borbón", o: ["En 1492, los Austrias", "En 1800, los Romanov", "En 1900, los Windsor"] },
-            { q: "Enumera a los cuatro monarcas que gobernaron en el siglo XVIII.", a: "Felipe V, Fernando VI, Carlos III y Carlos IV", o: ["Solo Carlos I", "Los Reyes Católicos", "Isabel II"] },
-            { q: "¿Qué modelo de Estado instauraron los Borbones?", a: "Gobierno absolutista", o: ["Democracia liberal", "República social", "Dictadura"] },
-            { q: "¿Qué dos territorios lograron conservar sus leyes propias?", a: "Navarra y el País Vasco", o: ["Madrid y Cataluña", "Andalucía y Galicia", "Valencia y Murcia"] },
-            { q: "Nombra tres reformas económicas e infraestructura de los Borbones.", a: "Manufacturas, carreteras, puertos y canales", o: ["Aviones, trenes y barcos", "Internet y telefonía", "Solo agricultura"] },
-            { q: "¿Bajo qué metáfora se definía la Ilustración?", a: "La razón como la luz que iluminaba el conocimiento", o: ["El sol que quema", "La noche oscura", "Un dibujo bonito"] },
-            { q: "¿Qué monarca fue el máximo exponente del despotismo ilustrado?", a: "Carlos III", o: ["Felipe V", "Carlos I", "Fernando VII"] },
-            { q: "¿Qué dos pilares defendía la ciencia del siglo XVII?", a: "La experimentación y el uso de la razón", o: ["La magia y los mitos", "La suerte y el azar", "Los cuentos antiguos"] },
-            { q: "¿Qué modelo astronómico confirmó Galileo Galilei?", a: "La teoría heliocentrista", o: ["Que la Tierra es plana", "Que el sol gira alrededor", "Que el cielo es de cristal"] },
-            { q: "¿Cuáles fueron los dos grandes hallazgos físicos de Isaac Newton?", a: "La ley de la gravedad universal y los colores de la luz", o: ["La electricidad y el fuego", "La rueda y la polea", "El telescopio"] },
-            { q: "¿Qué permitió descubrir el microscopio de Leeuwenhoek?", a: "La vida de los seres microscópicos", o: ["Las estrellas lejanas", "A través de las paredes", "El fondo del mar"] },
-            { q: "¿Qué dos grandes corrientes artísticas predominaron en la Edad Moderna?", a: "El Renacimiento y el Barroco", o: ["Gótico y Románico", "Cubismo y Pop Art", "Modernismo"] },
-            { q: "Menciona tres características del arte renacentista.", a: "El ser humano, la belleza y la simetría", o: ["El desorden y el caos", "Colores oscuros", "Cosas abstractas"] },
-            { q: "¿Qué dos elementos destacan visualmente en el arte Barroco?", a: "Abundante decoración y dramatismo", o: ["Líneas rectas y vacíos", "Simplicidad y blanco", "Solo dibujos de animales"] },
-            { q: "¿A qué se debe el sobrenombre de 'Siglo de Oro'?", a: "Por su esplendor artístico y literario", o: ["Porque todo era de oro real", "Porque duró mil años", "Porque ganaron las olimpiadas"] },
-            { q: "Cita el nombre de tres pintores famosos del Siglo de Oro.", a: "Velázquez, Zurbarán o Murillo", o: ["Picasso y Dalí", "Goya y Miró", "Da Vinci"] },
-            { q: "¿Quién es la figura cumbre de la literatura y cuál es su obra?", a: "Miguel de Cervantes y El Quijote", o: ["Lope de Vega y Harry Potter", "Quevedo", "Góngora"] }
+        const fullBank = [
+            { q: "¿Qué factor fundamental permitió el incremento de las expediciones durante los siglos XV y XVI?", a: "Los avances de navegación", o: ["Nuevas rutas terrestres", "El uso de globos aerostáticos", "La falta de mapas"] },
+            { q: "¿Cuál era la principal teoría geográfica que buscaba confirmar Cristóbal Colón?", a: "Demostrar que la Tierra era redonda", o: ["Que la Tierra era plana", "Que el sol giraba alrededor", "La existencia de la Antártida"] },
+            { q: "¿Cuál fue la fecha exacta y el puerto de origen de la primera expedición?", a: "3 de agosto de 1492 desde el Puerto de Palos de la Frontera", o: ["12 de octubre desde Sevilla", "1 de enero desde Madrid", "3 de agosto desde Cádiz"] },
+            { q: "¿Qué tres grandes civilizaciones poblaban América antes de los europeos?", a: "Aztecas, incas y mayas", o: ["Romanos, griegos y egipcios", "Vikingos y celtas", "Iberos y fenicios"] },
+            { q: "¿Qué ciudades eran las capitales de los imperios azteca e inca?", a: "Tenochtitlán y Cuzco", o: ["Madrid y Roma", "Lima y México DF", "París y Londres"] },
+            { q: "¿Qué tres plantas fueron introducidas en Europa desde América?", a: "Tomate, patatas o maíz", o: ["Trigo, arroz y cebada", "Seda, té y especias", "Manzanas y uvas"] },
+            { q: "¿Qué nombres aparecen en tus notas sobre la caída de los imperios americanos?", a: "Felipe, Felipe IV y Carlos IV", o: ["Napoleón Bonaparte", "Julio César", "Don Quijote"] },
+            { q: "¿Qué modelo territorial se usó para organizar el gobierno americano?", a: "Se organizó en dos virreinatos", o: ["En pequeños pueblos", "En una sola ciudad", "En comunidades autónomas"] },
+            { q: "¿Cuál era el orden jerárquico exacto de la sociedad colonial (1º al 4º)?", a: "Española, mestiza, indígena y negra", o: ["Reyes, nobles, vasallos y esclavos", "Ricos y pobres solamente", "Soldados y clero"] },
+            { q: "¿Qué modelo político se expandió al final de la Edad Media?", a: "Monarquía autoritaria", o: ["Democracia directa", "República federal", "Dictadura"] },
+            { q: "¿Qué tres estrategias usaron los monarcas para fortalecer su poder?", a: "Ejércitos permanentes, diplomacia y más impuestos", o: ["Fiestas, viajes y regalos", "Bajar impuestos y quitar soldados", "Pedir permiso a los nobles"] },
+            { q: "¿Cómo se dividían los grupos sociales en la Edad Moderna?", a: "Estamentos privilegiados y no privilegiados", o: ["Norte y Sur", "Ricos y humildes", "Equipos A y B"] },
+            { q: "¿De qué dos ventajas disfrutaban la nobleza y el clero?", a: "No pagaban impuestos y tenían sus propias leyes", o: ["Tenían internet gratis", "No trabajaban nunca", "Viajaban gratis"] },
+            { q: "¿Qué tres grupos integraban el estamento no privilegiado?", a: "Campesinos, comerciantes y artesanos", o: ["Reyes y obispos", "Solo caballeros", "Solo marineros"] },
+            { q: "¿Qué grupo social ganó importancia gracias al comercio y la banca?", a: "La burguesía", o: ["Los vikingos", "Los monjes", "Los samuráis"] },
+            { q: "¿Cuáles fueron las dos actividades económicas que más crecieron?", a: "El comercio y la banca", o: ["La caza y pesca", "La informática", "La minería de oro"] },
+            { q: "¿Qué entidades surgieron para financiar a comerciantes y monarcas?", a: "Las bancas públicas", o: ["Las iglesias", "Los museos", "Los colegios"] },
+            { q: "¿Cómo se llama la corriente de pensamiento de finales de la Edad Media?", a: "El Humanismo", o: ["El Feudalismo", "El Surrealismo", "El Modernismo"] },
+            { q: "¿Quiénes eran los Reyes Católicos?", a: "Isabel de Castilla y Fernando", o: ["Carlos I y Juana", "Felipe II e Isabel", "Alfonso X"] },
+            { q: "¿Qué medida militar tomaron los Reyes Católicos para consolidar su poder?", a: "Crear un ejército permanente", o: ["Cerrar los puertos", "Contratar piratas", "Hacer un muro"] },
+            { q: "¿Por qué tenía Carlos I derecho al trono?", a: "Era el nieto de los Reyes Católicos", o: ["Era el hijo de Colón", "Era un primo lejano", "Era el rey de Francia"] },
+            { q: "¿Qué generó conflictos tras la llegada de Carlos I?", a: "Sus costumbres extranjeras", o: ["Que no tenía dinero", "Que era muy bajo", "El mal tiempo"] },
+            { q: "¿Qué logro territorial tuvo Felipe II?", a: "Amplió los territorios", o: ["Perdió todas las tierras", "Se quedó solo en Madrid", "Descubrió la Luna"] },
+            { q: "¿Qué dos monarcas gobernaron entre los Reyes Católicos y Carlos II?", a: "Carlos I y Felipe II", o: ["Felipe V y Carlos III", "Isabel II", "Alfonso XII"] },
+            { q: "¿Qué decisión militar tomaron Felipe III o Carlos II en el siglo XVII?", a: "Renunciaron al ejército", o: ["Crearon los tanques", "Invadieron Asia", "Hicieron murallas"] },
+            { q: "¿Cómo se llamaba a las personas de confianza de los reyes?", a: "Los validos", o: ["Los secretarios", "Los guardaespaldas", "Los consejeros"] },
+            { q: "¿Qué cuatro factores causaron la crisis del siglo XVII?", a: "Guerras, pobreza, malas cosechas y poco comercio", o: ["Falta de barcos", "Lluvia de meteoritos", "Exceso de oro"] },
+            { q: "¿Qué pasó tras la muerte de Carlos II en 1700?", a: "Murió sin hijos y hubo dudas sobre Felipe V", o: ["España se partió en dos", "Vino un rey de China", "Se acabó el país"] },
+            { q: "¿Qué guerra causó la elección de Felipe de Borbón?", a: "La Guerra de Sucesión", o: ["La Guerra de los Cien Años", "La Guerra de Independencia", "La Guerra Civil"] },
+            { q: "¿En qué año terminó la Guerra de Sucesión y qué dinastía empezó?", a: "En 1713, la dinastía Borbón", o: ["En 1492, los Austrias", "En 1800, los Romanov", "En 1900"] },
+            { q: "¿Qué cuatro monarcas gobernaron en el siglo XVIII?", a: "Felipe V, Fernando VI, Carlos III y Carlos IV", o: ["Solo Carlos I", "Los Reyes Católicos", "Isabel II"] },
+            { q: "¿Qué tipo de gobierno instauraron los Borbones?", a: "Gobierno absolutista", o: ["Democracia", "República", "Anarquía"] },
+            { q: "¿Qué dos territorios mantuvieron sus leyes propias?", a: "Navarra y el País Vasco", o: ["Madrid y Cataluña", "Andalucía y Galicia", "Valencia"] },
+            { q: "Nombra tres reformas económicas de los Borbones.", a: "Manufacturas, carreteras y canales", o: ["Aviones y trenes", "Internet", "Solo caza"] },
+            { q: "¿Qué era la Ilustración?", a: "La razón como la luz del conocimiento", o: ["Un tipo de pintura", "Una noche oscura", "Un cuento"] },
+            { q: "¿Qué rey fue el máximo representante del despotismo ilustrado?", a: "Carlos III", o: ["Felipe V", "Carlos I", "Fernando VII"] },
+            { q: "¿Qué defendía la ciencia del siglo XVII?", a: "La experimentación y la razón", o: ["La magia y hechizos", "La suerte", "Los mitos antiguos"] },
+            { q: "¿Qué teoría confirmó Galileo Galilei?", a: "La teoría heliocentrista", o: ["Que la Tierra es plana", "Que el sol gira alrededor", "Que no hay estrellas"] },
+            { q: "¿Qué dos grandes hallazgos tuvo Isaac Newton?", a: "La gravedad universal y los colores de la luz", o: ["El fuego y la rueda", "La electricidad", "El coche"] },
+            { q: "¿Qué descubrió el microscopio de Leeuwenhoek?", a: "La vida de los seres microscópicos", o: ["Las estrellas", "El pasado", "El fondo del mar"] },
+            { q: "¿Qué dos estilos artísticos hubo en la Edad Moderna?", a: "El Renacimiento y el Barroco", o: ["Gótico y Románico", "Cubismo", "Modernismo"] },
+            { q: "Menciona tres características del Renacimiento.", a: "El ser humano, la belleza y la simetría", o: ["El caos y desorden", "Colores negros", "Cosas abstractas"] },
+            { q: "¿Qué dos elementos destacan en el Barroco?", a: "Mucha decoración y dramatismo", o: ["Líneas rectas y simplicidad", "Solo color blanco", "Dibujos de palos"] },
+            { q: "¿Por qué se llamaba 'Siglo de Oro'?", a: "Por su esplendor artístico y literario", o: ["Porque todo era de oro real", "Porque duró mil años", "Por las medallas"] },
+            { q: "Cita tres pintores famosos del Siglo de Oro.", a: "Velázquez, Zurbarán o Murillo", o: ["Picasso y Dalí", "Goya", "Leonardo"] },
+            { q: "¿Quién destaca en literatura y qué obra escribió?", a: "Miguel de Cervantes y El Quijote", o: ["Harry Potter", "Quevedo", "Góngora"] }
         ];
 
-        let selected = [];
+        let currentSelected = [];
         let currentIdx = 0;
         let score = 0;
         let canAnswer = true;
         const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
-        function playSfx(type) {
+        function playSound(type) {
             if (audioCtx.state === 'suspended') audioCtx.resume();
             const osc = audioCtx.createOscillator();
             const gain = audioCtx.createGain();
             osc.connect(gain); gain.connect(audioCtx.destination);
             if(type==='win'){
-                osc.frequency.setValueAtTime(500, audioCtx.currentTime);
-                osc.frequency.exponentialRampToValueAtTime(1200, audioCtx.currentTime + 0.1);
-                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.5);
-                osc.start(); osc.stop(audioCtx.currentTime + 0.5);
+                osc.frequency.setValueAtTime(440, audioCtx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(880, audioCtx.currentTime + 0.1);
+                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.4);
+                osc.start(); osc.stop(audioCtx.currentTime + 0.4);
             } else {
-                osc.type = 'sawtooth';
-                osc.frequency.setValueAtTime(150, audioCtx.currentTime);
-                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.5);
-                osc.start(); osc.stop(audioCtx.currentTime + 0.5);
+                osc.type = 'triangle';
+                osc.frequency.setValueAtTime(200, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.4);
+                osc.start(); osc.stop(audioCtx.currentTime + 0.4);
             }
         }
 
-        function shuffle(arr) {
-            return arr.sort(() => Math.random() - 0.5);
+        // Algoritmo Fisher-Yates para mezcla perfecta
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
         }
 
         function startGame() {
@@ -253,14 +265,16 @@
             document.getElementById('final-score').style.display = 'none';
             document.getElementById('quiz-content').style.display = 'block';
             
-            // Elegir 10 al azar
-            selected = shuffle([...bank]).slice(0, 10);
+            // Barajamos todo el banco y cogemos las primeras 10
+            const shuffledFull = shuffleArray([...fullBank]);
+            currentSelected = shuffledFull.slice(0, 10);
+            
             showQuestion();
         }
 
         function showQuestion() {
             canAnswer = true;
-            const qData = selected[currentIdx];
+            const qData = currentSelected[currentIdx];
             document.getElementById('progress-text').innerText = `Pregunta ${currentIdx + 1} de 10`;
             document.getElementById('q-text').innerText = qData.q;
             document.getElementById('next-btn').style.display = 'none';
@@ -268,8 +282,9 @@
             const optsDiv = document.getElementById('opts');
             optsDiv.innerHTML = '';
 
-            const allOpts = shuffle([qData.a, ...qData.o]);
-            allOpts.forEach(txt => {
+            // Barajamos también las opciones
+            const mixedOpts = shuffleArray([qData.a, ...qData.o]);
+            mixedOpts.forEach(txt => {
                 const b = document.createElement('button');
                 b.className = 'btn-opt';
                 b.innerText = txt;
@@ -286,15 +301,15 @@
             buttons.forEach(b => b.disabled = true);
 
             if (isCorrect) {
-                playSfx('win');
+                playSound('win');
                 btn.classList.add('correct');
                 score++;
                 document.getElementById('score-val').innerText = score;
             } else {
-                playSfx('lose');
+                playSound('lose');
                 btn.classList.add('wrong');
                 buttons.forEach(b => {
-                    if (b.innerText === selected[currentIdx].a) b.classList.add('correct');
+                    if (b.innerText === currentSelected[currentIdx].a) b.classList.add('correct');
                 });
             }
             document.getElementById('next-btn').style.display = 'inline-block';
@@ -313,14 +328,14 @@
             document.getElementById('quiz-content').style.display = 'none';
             document.getElementById('next-btn').style.display = 'none';
             document.getElementById('final-score').style.display = 'flex';
-            document.getElementById('progress-text').innerText = "¡Misión cumplida!";
+            document.getElementById('progress-text').innerText = "¡Misión terminada!";
             
-            let msg = "";
-            if(score === 10) msg = "¡ERES UNA EXPERTA EN HISTORIA! 👑✨";
-            else if(score > 7) msg = "¡Muy bien hecho, Pepa! ¡Casi perfecto! 🎈";
-            else msg = "¡Buen esfuerzo! Sigue practicando y lo lograrás. 💪";
+            let emoji = score >= 8 ? "🏆" : (score >= 5 ? "⭐" : "💪");
+            let msg = score >= 8 ? "¡Increíble! Eres una maestra de la Historia." : 
+                      (score >= 5 ? "¡Muy bien! Sigue así y serás invencible." : "¡Buen intento! Repasa un poquito más y verás cómo mejoras.");
             
-            document.getElementById('final-text').innerHTML = `<h2>Has conseguido</h2><h1>${score} / 10</h1><p>${msg}</p>`;
+            document.querySelector('.medal').innerText = emoji;
+            document.getElementById('final-text').innerHTML = `<h2>Resultado Final</h2><h1>${score} / 10</h1><p>${msg}</p>`;
         }
 
         window.onload = startGame;
